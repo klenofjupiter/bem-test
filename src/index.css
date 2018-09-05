@@ -5,13 +5,7 @@ body {
 }
 
 /*blocks*/
-.article {
-/*  display: grid;
-  grid-template-columns: 0px minmax(0px, 250px) 500px 250px auto; 
-  grid-gap: 15px;
-  grid-template-rows: auto;
-  margin-bottom: 15px;*/
-}
+.article {}
 
 .articleContent {
   font: "Adobe Garamond Pro", sans-serif;
@@ -22,16 +16,31 @@ body {
   color: hsl(0, 0%, 44%);
 }
 
-.section {
+.section4Column {
   display: grid;
-  grid-template-columns: 0px minmax(0px, 250px) 500px 250px auto; 
-  grid-gap: 15px;
+  grid-template-columns: 50px minmax(0px, 250px) 500px 250px auto; 
+  grid-gap: 25px;
   grid-template-rows: auto;
   margin-bottom: 15px;
 }
 
 .img {
   max-width: 100%;
+}
+
+.iframe {
+	width: 100%;
+}
+
+.bokeh {  
+  /*max-width: 100%;*/
+  /*min-width: 2000px;*/
+  min-width: 100%;
+  margin-left: 150px;
+  height: 850px;
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  border: none;
 }
 
 .link {
@@ -85,7 +94,7 @@ body {
   margin-left: -60px;
 }
 
-.section__rule {
+.section4Column__rule {
   grid-column-start: 3;
   width:100%;
   border:none;
@@ -94,20 +103,82 @@ body {
 
 /*modifiers --pseudo classes go here?*/
 
-.section--middle {
+.section4Column--middle {
  grid-column-start: 3;
 }
 
-.section--left {
+.section4Column--left {
   grid-column-start: 2;
   grid-column-end: 3;
 }
 
-.section--right {
+.section4Column--right {
   grid-column-start: 4;
   margin-right: 30px;
 }
 
+.section4Column--all {
+  grid-column: 1 / span 4;
+}
+
+.img--zoom {
+  transition: transform .2s; 
+}
+.img--zoom:hover {
+  transform: scale(1.5);
+}
 .tooltip:hover .tooltip__text {
     visibility: visible;
+}
+
+
+/*locus color modifiers*/
+.span--activity1Highlight {
+    background-color: #E22220BF;
+    padding: 3px;
+}
+
+.span--activity2Highlight {
+    background-color: #FCC528BF;
+    padding: 3px;
+}
+.span--activity3Highlight {
+    background-color: #018D5ABF;
+    padding: 3px;
+}
+.span--activity4Highlight {
+    background-color: #434D98BF;
+    color:black;
+    padding: 3px;
+}
+.span--resourceAHighlight {
+  background-color: #9575CDBF;
+  padding: 3px;
+}
+.span--resourceBHighlight {
+  background-color: #64B5F6BF;
+  padding: 3px;
+
+}
+.span--resourceCHighlight {
+  background-color: #81C784BF;
+  padding: 3px;
+}
+.span--resourceDHighlight {
+  background-color: #FFF176BF;
+  padding: 3px;
+}
+.span--resourceEHighlight {
+  background-color: #FFB74DBF;
+  padding: 3px;
+
+}
+.span--resourceFHighlight {
+  background-color: #EF5350BF;
+  padding: 3px;
+}
+.span--DIVHighlight {
+  background-color: #616261;
+  color: black;
+  padding: 3px;
 }
