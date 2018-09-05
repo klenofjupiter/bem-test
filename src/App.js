@@ -106,7 +106,7 @@ class App extends Component {
             </span>
             . In contrast, the difference in the proportion of businesses that sell other resource types is never larger than 1pp.
          </p>
-         <iframe className="section4Column--middle iframe" id="datawrapper-chart-UFIaN" src="//datawrapper.dwcdn.net/UFIaN/4/" scrolling="no" frameBorder="0" allowtransparency="true" height="308" />
+         <iframe className="section4Column--middle iframe" title="businesses that sell food and drink near subway areas" id="datawrapper-chart-UFIaN" src="//datawrapper.dwcdn.net/UFIaN/4/" scrolling="no" frameBorder="0" allowtransparency="true" height="308" />
           <p className="section4Column--middle">
            The proportion of businesses that 
             <span className="tooltip">
@@ -128,7 +128,7 @@ class App extends Component {
                 <span className="tooltip__text">Locus: 1.2.*</span>
               </span>.
           </p>
-          <iframe className="section4Column--middle iframe" id="datawrapper-chart-4qBfY" src="//datawrapper.dwcdn.net/4qBfY/2/" scrolling="no" frameBorder="0" allowtransparency="true" height="308" />
+          <iframe className="section4Column--middle iframe" title="businesses that deal with transport and logistics" id="datawrapper-chart-4qBfY" src="//datawrapper.dwcdn.net/4qBfY/2/" scrolling="no" frameBorder="0" allowtransparency="true" height="308" />
           <p className="section4Column--middle">
             Bearing in mind that these businesses represent only 3% of all businesses, they were still more likely to be found close to subway stations, making up 3.2% of businesses in subway areas compared to 2.7% in non-subway areas. This is true for the 
               <span className="tooltip">
@@ -157,7 +157,7 @@ class App extends Component {
               </span>
               . Examples of the former include vehicle towing, waste collection, and moving services; while the latter includes post offices, wireless carriers, and other telecommunication services.
           </p>
-          <iframe className="section4Column--middle iframe" id="datawrapper-chart-MXRsC" src="//datawrapper.dwcdn.net/MXRsC/4/" scrolling="no" frameBorder="0" allowtransparency="true" height="308" />
+          <iframe className="section4Column--middle iframe" title="procurement businesses" id="datawrapper-chart-MXRsC" src="//datawrapper.dwcdn.net/MXRsC/4/" scrolling="no" frameBorder="0" allowtransparency="true" height="308" />
           <hr className="section4Column__rule" />
        </section>
        <section className="section4Column">
@@ -205,7 +205,7 @@ class App extends Component {
               </span>
               .
            </p>
-           <iframe className="bokeh section4Column--all" src="/ACT_4.html" />
+           <iframe title="activity 4.*.*" className="bokeh section4Column--all" src="/ACT_4.html" />
            <p className="section4Column--middle">
             It is possible to identify subclusters by being more specific about what businesses do, specifically: professional services, finance, and public administration. Professional services is high in businesses that 
               <span className="tooltip">
@@ -236,9 +236,9 @@ class App extends Component {
               </span>
               . All four of the areas fit the profile of professional services, but only Two Bridges fits the public administration profile, and only Midtown and Financial District fit the finance profile.
            </p>
-            <iframe className="bokeh section4Column--all" src="/EL_4Div.html" />
-            <iframe className="bokeh section4Column--all" src="/EL_4D.html" />
-            <iframe className="bokeh section4Column--all" src="/EL_4F.html" />
+            <iframe title="function 4Div"  className="bokeh section4Column--all" src="/EL_4Div.html" />
+            <iframe title="function 4D" className="bokeh section4Column--all" src="/EL_4D.html" />
+            <iframe title="function 4F" className="bokeh section4Column--all" src="/EL_4F.html" />
             <h2 className="section4Column--middle">Tech and Information</h2>
             <p className="section4Column--middle">
             Related to professional services are the technology and information functions, which have obvious geographic patterns. This is visible from the concentration of businesses that
@@ -253,7 +253,7 @@ class App extends Component {
                 </span> 
                 resources.
             </p>
-            <iframe className="bokeh  section4Column--all" src="/RES_C.html" />
+            <iframe title="C resources" className="bokeh  section4Column--all" src="/RES_C.html" />
             <p className="section4Column--middle">
                The concentration emanates from Soho and Nolita
                <span className="tooltip">*
@@ -267,10 +267,10 @@ class App extends Component {
             <p className="section4Column--middle">
             There are also communities that have particularly high concentrations of businesses that Sell or Exchange. While this function is highly represented in any community (the median proportion is 33%), there are two clusters of subway stations within New York that stand out — ones that are heavy tourist destinations. These are the stretch from Times Square to the Empire State Building and Little Italy-Chinatown. We also see similar concentrations in the subway stations next to stadiums (161st St-Yankee Stadium and Atlantic Av-Barclays Center).
             </p>
-            <iframe className="bokeh section4Column--all" src="/ACT_3.html" />
+            <iframe title="activity 3.*.*" className="bokeh section4Column--all" src="/ACT_3.html" />
             <p className="section4Column--middle">It appears that the specific resource driving this concentration of sales is Equipment, presumably clothing and souvenirs. Whereas the median proportion of businesses that sell equipment is 9%, that figure is between 25-30% in Times Square, and between 14-20% in Chinatown. Similar increases are also observable in the stadium-adjacent subway stations. 
             </p>
-            <iframe className="bokeh section4Column--all" src="/EL_3B.html" />
+            <iframe title="function 3B" className="bokeh section4Column--all" src="/EL_3B.html" />
             <p className="section4Column--middle">
               Interestingly, these areas with high proportions of businesses selling equipment also have relatively high proportions of those selling food.
             </p>
@@ -296,9 +296,9 @@ class App extends Component {
             <p className="section4Column--middle"> 
              Explore on your own below!
             </p> 
-            <iframe className="bokeh section4Column--all" src="/ACT_ALL.html" />
-            <iframe className="bokeh section4Column--all" src="/RES_ALL.html" />
-            <iframe className="bokeh section4Column--all" src="/EL_ALL.html" />
+            <iframe title="all activities" className="bokeh section4Column--all" src="/ACT_ALL.html" />
+            <iframe title="all resources" className="bokeh section4Column--all" src="/RES_ALL.html" />
+            <iframe title="all functions" className="bokeh section4Column--all" src="/EL_ALL.html" />
             <hr className="section4Column__rule"/>
        </section>
        <section className="section4Column">
