@@ -131,7 +131,10 @@ body {
     visibility: visible;
 }
 
-
+.span--center {
+	margin-left: 50%;
+	margin-right: 50%;
+}
 /*locus color modifiers*/
 .span--activity1Highlight {
     background-color: #E22220BF;

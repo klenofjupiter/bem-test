@@ -13,6 +13,9 @@ class App extends Component {
       EL_4Div: false, 
       EL_4F: false, 
       EL_ALL: false,
+      RES_ALL: false, 
+      RES_C: false, 
+      RES_D: false,
     }
   }
 
@@ -224,7 +227,7 @@ class App extends Component {
               .
            </p>
            {  this.state.ACT_4 ? 
-            <span className="section4Column--all"><iframe title="activity 4.*.*" className="bokeh section4Column--all" src="/ACT_4.html" name="ACT_4"/> <button name="ACT_4" onClick={this.toggleBokeh}>close</button> </span> :
+            <span className="section4Column--all"><iframe title="activity 4.*.*" className="bokeh section4Column--all" src="/ACT_4.html" name="ACT_4"/> <button name="ACT_4" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
             <button name="ACT_4" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
             }
            <p className="section4Column--middle">
@@ -257,9 +260,18 @@ class App extends Component {
               </span>
               . All four of the areas fit the profile of professional services, but only Two Bridges fits the public administration profile, and only Midtown and Financial District fit the finance profile.
            </p>
-            <iframe title="function 4Div"  className="bokeh section4Column--all" src="/EL_4Div.html" />
-            <iframe title="function 4D" className="bokeh section4Column--all" src="/EL_4D.html" />
-            <iframe title="function 4F" className="bokeh section4Column--all" src="/EL_4F.html" />
+           {  this.state.EL_4Div ? 
+            <span className="section4Column--all"><iframe title="function 4Div" className="bokeh section4Column--all" src="/EL_4Div.html" name="EL_4Div"/> <button name="EL_4Div" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="EL_4Div" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
+           {  this.state.EL_4D ? 
+            <span className="section4Column--all"><iframe title="function 4D" className="bokeh section4Column--all" src="/EL_4D.html" name="EL_4D"/> <button name="EL_4D" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="EL_4D" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
+           {  this.state.EL_4F ? 
+            <span className="section4Column--all"><iframe title="function 4F" className="bokeh section4Column--all" src="/EL_4F.html" name="EL_4F"/> <button name="EL_4F" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="EL_4F" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
             <h2 className="section4Column--middle">Tech and Information</h2>
             <p className="section4Column--middle">
             Related to professional services are the technology and information functions, which have obvious geographic patterns. This is visible from the concentration of businesses that
@@ -274,7 +286,10 @@ class App extends Component {
                 </span> 
                 resources.
             </p>
-            <iframe title="C resources" className="bokeh  section4Column--all" src="/RES_C.html" />
+           {  this.state.RES_C ? 
+            <span className="section4Column--all"><iframe title="resource C" className="bokeh section4Column--all" src="/RES_C.html" name="RES_C"/> <button name="RES_C" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="RES_C" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
             <p className="section4Column--middle">
                The concentration emanates from Soho and Nolita
                <span className="tooltip">*
@@ -288,10 +303,16 @@ class App extends Component {
             <p className="section4Column--middle">
             There are also communities that have particularly high concentrations of businesses that Sell or Exchange. While this function is highly represented in any community (the median proportion is 33%), there are two clusters of subway stations within New York that stand out — ones that are heavy tourist destinations. These are the stretch from Times Square to the Empire State Building and Little Italy-Chinatown. We also see similar concentrations in the subway stations next to stadiums (161st St-Yankee Stadium and Atlantic Av-Barclays Center).
             </p>
-            <iframe title="activity 3.*.*" className="bokeh section4Column--all" src="/ACT_3.html" />
+           {  this.state.ACT_3 ? 
+            <span className="section4Column--all"><iframe title="activity 3" className="bokeh section4Column--all" src="/ACT_3.html" name="ACT_3"/> <button name="ACT_3" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="ACT_3" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
             <p className="section4Column--middle">It appears that the specific resource driving this concentration of sales is Equipment, presumably clothing and souvenirs. Whereas the median proportion of businesses that sell equipment is 9%, that figure is between 25-30% in Times Square, and between 14-20% in Chinatown. Similar increases are also observable in the stadium-adjacent subway stations. 
             </p>
-            <iframe title="function 3B" className="bokeh section4Column--all" src="/EL_3B.html" />
+           {  this.state.EL_3B ? 
+            <span className="section4Column--all"><iframe title="function 3B" className="bokeh section4Column--all" src="/EL_3B.html" name="EL_4F"/> <button name="EL_3B" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="EL_3B" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
             <p className="section4Column--middle">
               Interestingly, these areas with high proportions of businesses selling equipment also have relatively high proportions of those selling food.
             </p>
@@ -317,9 +338,18 @@ class App extends Component {
             <p className="section4Column--middle"> 
              Explore on your own below!
             </p> 
-            <iframe title="all activities" className="bokeh section4Column--all" src="/ACT_ALL.html" />
-            <iframe title="all resources" className="bokeh section4Column--all" src="/RES_ALL.html" />
-            <iframe title="all functions" className="bokeh section4Column--all" src="/EL_ALL.html" />
+           {  this.state.ACT_ALL ? 
+            <span className="section4Column--all"><iframe title="all activities" className="bokeh section4Column--all" src="/ACT_ALL.html" name="ACT_ALL"/> <button name="ACT_ALL" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="ACT_ALL" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
+            {  this.state.RES_ALL ? 
+            <span className="section4Column--all"><iframe title="all resources" className="bokeh section4Column--all" src="/RES_ALL.html" name="RES_ALL"/> <button name="RES_ALL" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="RES_ALL" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
+           {  this.state.EL_ALL? 
+            <span className="section4Column--all"><iframe title="all functions" className="bokeh section4Column--all" src="/EL_ALL.html" name="EL_ALL"/> <button name="EL_ALL" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="EL_ALL" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
             <hr className="section4Column__rule"/>
        </section>
        <section className="section4Column">
