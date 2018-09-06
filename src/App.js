@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      ACT_3 : false, 
+      ACT_4: false, 
+      ACT_ALL: false, 
+      EL_3B: false, 
+      EL_4D: false, 
+      EL_4Div: false, 
+      EL_4F: false, 
+      EL_ALL: false,
+    }
+  }
+
+  toggleBokeh = evt => {
+    console.log('evt', evt)
+    this.setState({ [evt.target.name] : !this.state[evt.target.name]})
+  }
   render() {
     return (
       <article className="article articleContent"> 
@@ -205,7 +223,10 @@ class App extends Component {
               </span>
               .
            </p>
-           <iframe title="activity 4.*.*" className="bokeh section4Column--all" src="/ACT_4.html" />
+           {  this.state.ACT_4 ? 
+            <span className="section4Column--all"><iframe title="activity 4.*.*" className="bokeh section4Column--all" src="/ACT_4.html" name="ACT_4"/> <button name="ACT_4" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="ACT_4" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            }
            <p className="section4Column--middle">
             It is possible to identify subclusters by being more specific about what businesses do, specifically: professional services, finance, and public administration. Professional services is high in businesses that 
               <span className="tooltip">
