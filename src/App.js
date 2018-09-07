@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   toggleBokeh = evt => {
-    console.log('evt', evt)
     this.setState({ [evt.target.name] : !this.state[evt.target.name]})
   }
   render() {
@@ -31,7 +30,7 @@ class App extends Component {
          <img className="img section4Column--left" src="https://media.giphy.com/media/wotcaeqAMf8KQ/giphy.gif" />
          <p className="section4Column--middle">
            It is hard to mentally separate New York City from its iconic subway system, which can boast of having the most stations of any  
-           <a className="link" href="https://en.wikipedia.org/wiki/List_of_metro_systems#List" target="_blank" rel="noopener noreferrer"> metro system in the world</a>
+           <a className="link" href="https://en.wikipedia.org/wiki/List_of_metro_systems#List"> metro system in the world</a>
           <span className="tooltip">*
              <span className="tooltip__text">472 if interchange stations (i.e. different sets of platforms) are counted separately.
              </span>
@@ -40,7 +39,7 @@ class App extends Component {
          </p>
          <p className="section4Column--middle">
            All of that is a roundabout way of saying that - despite 
-           <a className="link" href="https://www.nytimes.com/interactive/2018/05/09/nyregion/subway-crisis-mta-decisions-signals-rules.html" target="_blank" rel="noopener noreferrer"> its mounting troubles</a>
+           <a className="link" href="https://www.nytimes.com/interactive/2018/05/09/nyregion/subway-crisis-mta-decisions-signals-rules.html"> its mounting troubles</a>
             - the subway system is a fundamental and dynamic part of New York City and its economy. <i>But how exactly?</i> We can explore this relationship using businesses, their addresses, and their functional tag, classified according to the Locus Classification System. Specifically, we compare the distributions of businesses surrounding subway stations and non-subway areas, and identify various economic communities in New York through the lens of subway stations.
          </p>
          <p className="section4Column--right sidebar">
@@ -228,7 +227,7 @@ class App extends Component {
            </p>
            {  this.state.ACT_4 ? 
             <span className="section4Column--all"><iframe title="activity 4.*.*" className="bokeh section4Column--all" src="/ACT_4.html" name="ACT_4"/> <button name="ACT_4" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="ACT_4" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="ACT_4" className="section4Column--middle span--center button" onClick={this.toggleBokeh}> click to open </button>
             }
            <p className="section4Column--middle">
             It is possible to identify subclusters by being more specific about what businesses do, specifically: professional services, finance, and public administration. Professional services is high in businesses that 
@@ -261,16 +260,16 @@ class App extends Component {
               . All four of the areas fit the profile of professional services, but only Two Bridges fits the public administration profile, and only Midtown and Financial District fit the finance profile.
            </p>
            {  this.state.EL_4Div ? 
-            <span className="section4Column--all"><iframe title="function 4Div" className="bokeh section4Column--all" src="/EL_4Div.html" name="EL_4Div"/> <button name="EL_4Div" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="EL_4Div" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <span className="section4Column--all"><iframe title="function 4Div" className="bokeh section4Column--all" src="/EL_4Div.html" name="EL_4Div"/> <button name="EL_4Div" className="button span--center section4Column--middle" onClick={this.toggleBokeh}>close</button> </span> :
+            <button name="EL_4Div" className="button section4Column--middle span--center" onClick={this.toggleBokeh}> click to open </button>
             }
            {  this.state.EL_4D ? 
             <span className="section4Column--all"><iframe title="function 4D" className="bokeh section4Column--all" src="/EL_4D.html" name="EL_4D"/> <button name="EL_4D" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="EL_4D" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="EL_4D" className="button section4Column--middle span--center" onClick={this.toggleBokeh}> click to open </button>
             }
            {  this.state.EL_4F ? 
             <span className="section4Column--all"><iframe title="function 4F" className="bokeh section4Column--all" src="/EL_4F.html" name="EL_4F"/> <button name="EL_4F" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="EL_4F" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="EL_4F" className="section4Column--middle button span--center" onClick={this.toggleBokeh}> click to open </button>
             }
             <h2 className="section4Column--middle">Tech and Information</h2>
             <p className="section4Column--middle">
@@ -288,7 +287,7 @@ class App extends Component {
             </p>
            {  this.state.RES_C ? 
             <span className="section4Column--all"><iframe title="resource C" className="bokeh section4Column--all" src="/RES_C.html" name="RES_C"/> <button name="RES_C" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="RES_C" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="RES_C" className="section4Column--middle button span--center" onClick={this.toggleBokeh}> click to open </button>
             }
             <p className="section4Column--middle">
                The concentration emanates from Soho and Nolita
@@ -305,13 +304,13 @@ class App extends Component {
             </p>
            {  this.state.ACT_3 ? 
             <span className="section4Column--all"><iframe title="activity 3" className="bokeh section4Column--all" src="/ACT_3.html" name="ACT_3"/> <button name="ACT_3" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="ACT_3" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="ACT_3" className="section4Column--middle button span--center" onClick={this.toggleBokeh}> click to open </button>
             }
             <p className="section4Column--middle">It appears that the specific resource driving this concentration of sales is Equipment, presumably clothing and souvenirs. Whereas the median proportion of businesses that sell equipment is 9%, that figure is between 25-30% in Times Square, and between 14-20% in Chinatown. Similar increases are also observable in the stadium-adjacent subway stations. 
             </p>
            {  this.state.EL_3B ? 
             <span className="section4Column--all"><iframe title="function 3B" className="bokeh section4Column--all" src="/EL_3B.html" name="EL_4F"/> <button name="EL_3B" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="EL_3B" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="EL_3B" className="section4Column--middle button span--center" onClick={this.toggleBokeh}> click to open </button>
             }
             <p className="section4Column--middle">
               Interestingly, these areas with high proportions of businesses selling equipment also have relatively high proportions of those selling food.
@@ -320,7 +319,7 @@ class App extends Component {
        <section className="section4Column">
             <p className="section4Column--middle">
             A recent 
-            <a className="link" href="https://www.renthop.com/studies/nyc/nyc-rents-by-subway-proximity" target="_blank" rel="noopener noreferrer">
+            <a className="link" href="https://www.renthop.com/studies/nyc/nyc-rents-by-subway-proximity">
             report
             </a>
              found that living in apartments that are a ten minute walk from subway stations decreases rent by around 10%
@@ -340,15 +339,15 @@ class App extends Component {
             </p> 
            {  this.state.ACT_ALL ? 
             <span className="section4Column--all"><iframe title="all activities" className="bokeh section4Column--all" src="/ACT_ALL.html" name="ACT_ALL"/> <button name="ACT_ALL" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="ACT_ALL" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="ACT_ALL" className=" button section4Column--middle span--center" onClick={this.toggleBokeh}> click to open </button>
             }
             {  this.state.RES_ALL ? 
             <span className="section4Column--all"><iframe title="all resources" className="bokeh section4Column--all" src="/RES_ALL.html" name="RES_ALL"/> <button name="RES_ALL" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="RES_ALL" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="RES_ALL" className="button section4Column--middle span--center" onClick={this.toggleBokeh}> click to open </button>
             }
            {  this.state.EL_ALL? 
             <span className="section4Column--all"><iframe title="all functions" className="bokeh section4Column--all" src="/EL_ALL.html" name="EL_ALL"/> <button name="EL_ALL" className="button span--center" onClick={this.toggleBokeh}>close</button> </span> :
-            <button name="EL_ALL" className="section4Column--middle" onClick={this.toggleBokeh}> click to open </button>
+            <button name="EL_ALL" className="button section4Column--middle span--center" onClick={this.toggleBokeh}> click to open </button>
             }
             <hr className="section4Column__rule"/>
        </section>
@@ -356,19 +355,19 @@ class App extends Component {
         <h3 className="section4Column--middle"> Notes</h3>
         <p className="section4Column--middle">
         Subway station data was obtained from
-          <a className="link" href="https://data.cityofnewyork.us/Transportation/Subway-Stations/arq3-7z49" target="_blank"  rel="noopener noreferrer">
+          <a className="link" href="https://data.cityofnewyork.us/Transportation/Subway-Stations/arq3-7z49">
           NYCOpenData
           </a>
           , while the business data was obtained from Dun & Bradstreet. To compare the differences between subway and non-subway areas, we used the independent samples t-test, controlling for multiple testing with the 
-          <a className="link" href="https://en.wikipedia.org/wiki/False_discovery_rate#Benjamini%E2%80%93Hochberg_procedure" target="_blank"  rel="noopener noreferrer">
+          <a className="link" href="https://en.wikipedia.org/wiki/False_discovery_rate#Benjamini%E2%80%93Hochberg_procedure" >
             Benjamini-Hochberg false discovery rate
           </a>
           . To estimate the changes in function with distance from subway stations, we used a multiple regression model and included a quadratic term for distance (to account for its exponential distribution) as well as the
-           <a className="link" href="https://pypi.org/project/uszipcode/" target="_blank" rel="noopener noreferrer">
+           <a className="link" href="https://pypi.org/project/uszipcode/">
             population density, average wage, and number of housing units
           </a>
            of the zip code to which the coordinate belonged. The map visualizations were made with
-            <a className="link" href="https://bokeh.pydata.org/" target="_blank" rel="noopener noreferrer">
+            <a className="link" href="https://bokeh.pydata.org/">
             Bokeh
             </a>
              in Python.

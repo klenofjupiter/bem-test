@@ -64,7 +64,10 @@ body {
   font-size: 80%;
   line-height: 1.5;
 }
-
+.button {
+  max-width: 200px;
+  min-width: 100px;
+}
 /*elements*/
 
 .article__title {
@@ -134,6 +137,8 @@ body {
 .span--center {
 	margin-left: 50%;
 	margin-right: 50%;
+	 /*margin: auto;*/
+
 }
 /*locus color modifiers*/
 .span--activity1Highlight {
