@@ -65,8 +65,16 @@ body {
   line-height: 1.5;
 }
 .button {
-  max-width: 200px;
-  min-width: 100px;
+/*  max-width: 200px;
+  min-width: 100px;*/
+  /*min-width: 2000px;*/
+ /*width:150px;*/
+ padding: 8px;
+ background: none;
+ border-radius: 20px;
+ border: solid black 2px;
+ font-weight: bold;
+ font-size: 1em;
 }
 /*elements*/
 
@@ -121,7 +129,7 @@ body {
 }
 
 .section4Column--all {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 5;
 }
 
 .img--zoom {
@@ -133,12 +141,14 @@ body {
 .tooltip:hover .tooltip__text {
     visibility: visible;
 }
+.span--centeredContainer { /*for vertical centering? rename?*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
+}
 .span--center {
-	margin-left: 50%;
-	margin-right: 50%;
-	 /*margin: auto;*/
-
+ justify-self: center;
 }
 /*locus color modifiers*/
 .span--activity1Highlight {
