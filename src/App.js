@@ -380,18 +380,55 @@ import { Link } from 'react-router-dom';
 // }
 
 //Nav Bar
+// class App extends Component {
+//   render() {
+//     return(
+
+//       <header className="header headerContent">
+//         <Link to="/" className="logoLink"><img className="header__logo" src="cropped-orange.png"/></Link>
+//          <div className="navLinkList navLinkListContent"><a className="navLinkList__item" href="https://www.home.locus/about/">ABOUT</a> <a className="navLinkList__item" href="https://www.home.locus/people-and-teams">PEOPLE & TEAMS</a> <a className="navLinkList__item" href="https://www.home.locus/contact/">CONTACT</a></div>
+//       </header>
+
+//     )
+//   }
+// }
+
+//table of contents
 class App extends Component {
-  constructor(){
-    super();
-  }
   render() {
-    return(
-
-      <header className="header headerContent">
-        <a href="/" className="logoLink"><img className="header__logo" src="cropped-orange.png"/></a>
-         <div className="navLinkList navLinkListContent"><a className="navLinkList__item" href="https://www.home.locus/about/">ABOUT</a> <a className="navLinkList__item" href="https://www.home.locus/people-and-teams">PEOPLE & TEAMS</a> <a className="navLinkList__item" href="https://www.home.locus/contact/">CONTACT</a></div>
-      </header>
-
+    return (
+      <ul className="cardList">
+        <li className="articleCard">
+          <a to="/knowles-article">
+            <img className="articleCard__image" src="36-Phase.png" />
+            <hr />
+            <span className="articleCard__textArea" >
+              <span className="articleCard__title"> B2B vs. B2C </span> <span className="articleCard__date"> some date</span>
+              <span className="articleCard__articlePreview "> how the end customer changes a business </span>
+            </span>
+          </a>
+        </li>
+        <li className="articleCard">
+         <a to="/subway-article">
+          <img className="articleCard__image" src="franklin_st.png" />
+          <hr />
+          <span className="articleCard__textArea" >
+            <span className="articleCard__title"> NYC Subway</span> <span className="articleCard__date"> some date</span>
+            <span className="articleCard__articlePreview"> public transportation and micro-economies </span>
+          </span>
+          </a>
+        </li>
+        <li className="articleCard">
+         <a to="/subway-article">
+          <img className="articleCard__image" src="36-Phase.png" />
+          <hr />
+          <span className="articleCard__textArea" >
+            <span className="articleCard__title"> test article</span> <span className="articleCard__date"> some date</span>
+            <span className="articleCard__articlePreview">lorem ipsum dolor sit amet </span>
+          </span>
+          </a>
+        </li>
+      </ul>
     )
   }
 }
