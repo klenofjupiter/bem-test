@@ -435,13 +435,82 @@ import { Link } from 'react-router-dom';
 
 //footer 
 
-const App = () => (
-  <div className="footer footerContent">
-   <span>Locus Analytics: One Liberty Plaza, New York, NY, 10006, United States</span>
-     <a className="footer__link link" href="https://www.home.locus/about-fis">What is FIS?</a>
-     <a className="footer__link link" href="https://www.linkedin.com/company/locus-analytics/">LinkedIn</a>
-     <a className="footer__link link" href="https://twitter.com/locusanalytics">Twitter</a>
-  </div>
-)
+// const Footer = () => (
+//   <div className="footer footerContent">
+//    <span>Locus Analytics: One Liberty Plaza, New York, NY, 10006, United States</span>
+//      <a className="footer__link link" href="https://www.home.locus/about-fis">What is FIS?</a>
+//      <a className="footer__link link" href="https://www.linkedin.com/company/locus-analytics/">LinkedIn</a>
+//      <a className="footer__link link" href="https://twitter.com/locusanalytics">Twitter</a>
+//   </div>
+// )
+
+//knowles article 
+
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      barcodeIndex: 0,
+      showB2B: true,
+      inDev: false,
+    };
+  }
+
+  distanceClicker = (up = true) => {
+    if (up){
+     if (this.state.barcodeIndex < 5) {
+      let newInd = (this.state.barcodeIndex + 1)
+      this.setState({barcodeIndex : newInd})
+      }else{
+       this.setState({barcodeIndex: 0})
+     }
+    }else {
+      if(this.state.barcodeIndex > 0){
+        let newInd = (this.state.barcodeIndex - 1)
+        this.setState({barcodeIndex: newInd})
+      }else{
+        this.setState({barcodeIndex: 5})
+      }
+    }
+  }
+
+  businessClicker = () => {
+    if(this.state.barcodeIndex !== 0){
+      this.setState({barcodeIndex: 0})
+    }else{
+      this.setState({barcodeIndex: 1})
+    }
+  }
+
+  switchClick = (bool) => {
+    this.setState({showB2B: bool})
+  }
+  render() {
+    return (
+      <div className="article articleContent twoColumnArticle">
+        <article className="twoColumnArticle--left">
+          <h1 className="article__title article__title--withBackgroundImage article--backgroundImageBilly">2 B or 2 C: that is the Question</h1>
+          <h4>Using Function to Distinguish B2B and B2C Companies</h4>
+          <section>
+            <p>A common distinction made in the business world is between businesses that sell to other businesses and businesses that sell to consumers (<strong>B2B</strong> and <strong>B2C</strong> respectively). While it is easy to determine if a single company is B2B or B2C, it is not entirely straightforward when attempting to do so for many companies within a dataset.</p>
+            <p>Before we dive into our data, let&apos;s talk about organizing food.</p>
+             <p><strong>Warning: Many of the examples in this article involve food products, so please make sure to eat before reading any further.</strong></p>
+             <img src="food.gif" alt="Dancing Food" className="img"/>
+            <p>Picture your local grocery store. Chances are, the products are organized in some variant of the following: baked goods and fresh vegetables in one aisle, raw meats in another, followed by frozen foods and dairy products, and candy across from soft drinks in the final aisle.</p>
+            <p>Now, imagine a magical grocery store with shelves that shift around based on the needs of each customer who walks in. Leigh wants to make pasta for dinner, so the first aisle is now filled with different pasta types, marinara sauce, ground beef, fresh vegetables (for a balanced meal!), and assorted herbs. Aaron, on the other hand, does not know what he wants to buy, but he does have a gluten allergy, so the shelves now reshuffle such that every food item containing gluten is hidden. </p>
+            <p>The difference between the grocery store just described and the grocery stores that exist in reality is similar to that of the Locus Classification System (LCS) and traditional classification systems used by governmental agencies, academics, and investment firms. A key factor is that Locus stores multiple attributes about companies in a standardized structure referred to as the <strong>barcode</strong> (illustrated on the right).</p>
+            <p>Let’s talk through multiple attributes with B2B and B2C distinctions in mind.</p>
+          </section>
+          <section>
+            <h4>Multiple Attributes</h4>
+            <p>Traditional classification systems like GICS and NAICS are organized in a hierarchical (i.e. tree-like) taxonomies. This system of storing information is easy to navigate, but makes it difficult to find companies based on criteria that differ from those used to determine the original taxonomy. For example, B2B/B2C is not a GICS criterion, and so the most granular GICS groups contain both types of businesses, such as residential and commercial real estate companies, or apparel companies that sell directly and indirectly to consumers.</p>
+            <p>In contrast, the Locus barcode specifies what a company does (produce engines), the customer (shipping companies), the intermediaries that exist (truck manufacturers and truck retailers) between them and the customer, how the customer uses the product (transport industrial equipment), and the customer’s customer (processed food manufacturer).</p>
+            <p>This allows users to make flexible groupings based on any desired criteria. For example, querying the Locus database for all companies whose domain involves “transporting” would return the truck engine manufacturers, as well as truck manufacturers, aircraft wholesalers, public transit operators, automobile dealers, road construction, and many others. As we will see later, in order to select all B2C companies, we can query for all companies who i) have consumers as customers and ii) do not have intermediaries between them and their customers. The resulting company list will include apparel retailers, media streaming services, pharmacies, and many others.</p>
+          </section>
+        </article>
+      </div>
+    )
+  }
+}
 
 export default App;
