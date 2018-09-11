@@ -394,42 +394,54 @@ import { Link } from 'react-router-dom';
 // }
 
 //table of contents
-class App extends Component {
-  render() {
-    return (
-      <ul className="cardList">
-        <li className="articleCard">
-          <a to="/knowles-article">
-            <img className="articleCard__image" src="36-Phase.png" />
-            <hr />
-            <span className="articleCard__textArea" >
-              <span className="articleCard__title"> B2B vs. B2C </span> <span className="articleCard__date"> some date</span>
-              <span className="articleCard__articlePreview "> how the end customer changes a business </span>
-            </span>
-          </a>
-        </li>
-        <li className="articleCard">
-         <a to="/subway-article">
-          <img className="articleCard__image" src="franklin_st.png" />
-          <hr />
-          <span className="articleCard__textArea" >
-            <span className="articleCard__title"> NYC Subway</span> <span className="articleCard__date"> some date</span>
-            <span className="articleCard__articlePreview"> public transportation and micro-economies </span>
-          </span>
-          </a>
-        </li>
-        <li className="articleCard">
-         <a to="/subway-article">
-          <img className="articleCard__image" src="36-Phase.png" />
-          <hr />
-          <span className="articleCard__textArea" >
-            <span className="articleCard__title"> test article</span> <span className="articleCard__date"> some date</span>
-            <span className="articleCard__articlePreview">lorem ipsum dolor sit amet </span>
-          </span>
-          </a>
-        </li>
-      </ul>
-    )
-  }
-}
+// class TableOfContents extends Component {
+//   render() {
+//     return (
+//       <ul className="cardList">
+//         <li className="articleCard">
+//           <a to="/knowles-article">
+//             <img className="articleCard__image" src="36-Phase.png" />
+//             <hr />
+//             <span className="articleCard__textArea" >
+//               <span className="articleCard__title"> B2B vs. B2C </span> <span className="articleCard__date"> some date</span>
+//               <span className="articleCard__articlePreview "> how the end customer changes a business </span>
+//             </span>
+//           </a>
+//         </li>
+//         <li className="articleCard">
+//          <a to="/subway-article">
+//           <img className="articleCard__image" src="franklin_st.png" />
+//           <hr />
+//           <span className="articleCard__textArea" >
+//             <span className="articleCard__title"> NYC Subway</span> <span className="articleCard__date"> some date</span>
+//             <span className="articleCard__articlePreview"> public transportation and micro-economies </span>
+//           </span>
+//           </a>
+//         </li>
+//         <li className="articleCard">
+//          <a to="/subway-article">
+//           <img className="articleCard__image" src="36-Phase.png" />
+//           <hr />
+//           <span className="articleCard__textArea" >
+//             <span className="articleCard__title"> test article</span> <span className="articleCard__date"> some date</span>
+//             <span className="articleCard__articlePreview">lorem ipsum dolor sit amet </span>
+//           </span>
+//           </a>
+//         </li>
+//       </ul>
+//     )
+//   }
+// }
+
+//footer 
+
+const App = () => (
+  <div className="footer footerContent">
+   <span>Locus Analytics: One Liberty Plaza, New York, NY, 10006, United States</span>
+     <a className="footer__link link" href="https://www.home.locus/about-fis">What is FIS?</a>
+     <a className="footer__link link" href="https://www.linkedin.com/company/locus-analytics/">LinkedIn</a>
+     <a className="footer__link link" href="https://twitter.com/locusanalytics">Twitter</a>
+  </div>
+)
+
 export default App;
